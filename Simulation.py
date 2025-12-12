@@ -175,9 +175,9 @@ ax_w0B = plt.axes([0.2, 0.25, 0.65, 0.03])
 ax_zRB = plt.axes([0.2, 0.20, 0.65, 0.03])
 ax_pw = plt.axes([0.2, 0.15, 0.65, 0.03])
 
-slider_w0B = Slider(ax_w0B, "Beam B waist w0", 0, 1.5, valinit=w0B_init)
-slider_zRB = Slider(ax_zRB, "Rayleigh length zR_B", 0, 50, valinit=zRB_init)
-slider_pw = Slider(ax_pw, "Pump Power", 0, 50, valinit=pw_init)
+slider_w0B = Slider(ax_w0B, "Beam B waist w0 (mm)", 0, 1.5, valinit=w0B_init)
+slider_zRB = Slider(ax_zRB, "Rayleigh length zR_B (mm)", 0, 50, valinit=zRB_init)
+slider_pw = Slider(ax_pw, "Pump Power (mW)", 0, 50, valinit=pw_init)
 
 pw_op_text = ax.text(-195, 155, f"Pump power: {pw_init:.1f} mW -> Optimal output power: {optimal_power()*1000:.3f} μW", ha='left', fontsize=8)
 pw_curr_text = ax.text(-195, 130, f"Pump power: {pw_init:.1f} mW -> Current output power: {current_power()*1000:.3f} μW", ha='left', fontsize=8)
