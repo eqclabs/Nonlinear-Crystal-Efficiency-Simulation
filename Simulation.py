@@ -27,14 +27,17 @@ def optimal_params():
 
 def optimal_power():
     power_in = slider_pw.val  # mW
-    power_out = (power_in/1000) * (optimal_efficiency/100) * crystal_length
+    power_eff = (optimal_efficiency/100) * crystal_length
+    power_eff_pump = power_eff/100 * power_in
+    power_out = power_eff_pump/100 * power_in
 
     return power_out
 
 def current_power():
     power_in = slider_pw.val  # mW
-    power_out = (power_in/1000) * (optimal_efficiency/100) * crystal_length
-
+    power_eff = (optimal_efficiency / 100) * crystal_length
+    power_eff_pump = power_eff / 100 * power_in
+    power_out = power_eff_pump / 100 * power_in
 
     return power_out*eta0
 
